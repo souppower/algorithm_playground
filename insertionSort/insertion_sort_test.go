@@ -5,21 +5,21 @@ import (
 )
 
 func Test_insertion_sort(t *testing.T) {
-	unsorted_list := []int{10, 2, 3, 1, 5, 6}
+	list := &List{Values: []int{10, 2, 3, 1, 5, 6}}
+	expected := &List{Values: []int{1, 2, 3, 5, 6, 10}}
 
-	result := insertion_sort(unsorted_list)
-	expected := []int{1, 2, 3, 5, 6, 10}
+	list.Sort()
 
-	slices_equal := slice_equals(result, expected)
+	isEqualList := isEqualList(list, expected)
 
-	if !slices_equal {
-		t.Errorf("list was not sorted. expected: %v, but got %v", expected, result)
+	if !isEqualList {
+		t.Errorf("list was not sorted. expected: %v, but got %v", expected, list)
 	}
 }
 
-func slice_equals(first []int, second []int) bool {
-	for i, v := range first {
-		if v != second[i] {
+func isEqualList(first, second *List) bool {
+	for i, v := range (*first).Values {
+		if v != (*second).Values[i] {
 			return false
 		}
 	}

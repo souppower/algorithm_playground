@@ -1,15 +1,17 @@
 package insertionSort
 
-func insertion_sort(list []int) []int {
-	for ins := 1; ins < len(list); ins++ {
-		temp := list[ins]
+type List struct {
+	Values []int
+}
+
+func (l *List) Sort() {
+	for ins := 1; ins < len(l.Values); ins++ {
+		temp := l.Values[ins]
 		comp := ins
-		for comp > 0 && list[comp-1] > temp {
-			list[comp] = list[comp-1]
+		for comp > 0 && l.Values[comp-1] > temp {
+			l.Values[comp] = l.Values[comp-1]
 			comp--
 		}
-		list[comp] = temp
+		l.Values[comp] = temp
 	}
-
-	return list
 }
