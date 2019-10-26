@@ -1,4 +1,4 @@
-package main
+package insertionSort
 
 func insertion_sort(list []int) []int {
 	for ins := 1; ins < len(list); ins++ {
