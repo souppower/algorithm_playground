@@ -6,8 +6,8 @@ import (
 )
 
 func TestQuickSort(t *testing.T) {
-	list := &List{Values: []int{2,1,5,4,3}}
-	expected := &List{Values: []int{1,2,3,4,5}}
+	list := &List{Values: []int{2, 1, 5, 4, 3}}
+	expected := &List{Values: []int{1, 2, 3, 4, 5}}
 
 	sorted := list.Sort()
 
