@@ -10,7 +10,7 @@ func TestKnapsack(t *testing.T) {
 	capacity := 50
 	expected := 220
 
-	res := knapsack(len(values), weights, values, capacity)
+	res := KP(len(values), weights, values, capacity)
 
 	if res != expected {
 		t.Errorf("Expected %d, but got %d", expected, res)
