@@ -3,4 +3,4 @@ project(algorithm_playground)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(algorithm_playground main.cpp)
+add_executable(algorithm_playground main.cpp dfs/subset-sum-problem.cpp)
