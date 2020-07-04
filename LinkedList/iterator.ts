@@ -1,4 +1,4 @@
-import {INode} from "./deque";
+import {INode} from "./SLList";
 
 export interface IIterator<Item> {
     hasNext(): boolean;
@@ -25,10 +25,4 @@ export class Iterator<Item> implements IIterator<Item> {
         this.current = this.current.next;
         return item;
     }
-}
-
-const it = new Iterator<number>({item: 1, prev: null, next: { item:2, prev: null, next: {item: 3, prev: null, next: null }}})
-while(it.hasNext()) {
-    const item = it.next();
-    console.log(item);
 }
