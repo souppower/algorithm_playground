@@ -9,7 +9,8 @@ export interface INode<Item> {
     next: INode<Item>;
 }
 
-class SLList<Item> implements Iterable<Item>{
+// implemented with Singly Linked List
+class Deque<Item> implements Iterable<Item>{
     public size = 0;
     sentinel: INode<Item>;
 

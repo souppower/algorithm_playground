@@ -1,4 +1,4 @@
-import {INode} from "./SLList";
+import {INode} from "./Deque";
 
 export interface IIterator<Item> {
     hasNext(): boolean;
