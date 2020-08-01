@@ -1,23 +1,29 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-// a > bが前提
-int gcd(int a, int b){
-   if (a % b == 0){
-       return b;
-   } else {
-       return gcd(b, a % b);
-   }
+class myclass {
+    int a;
+public:
+    void set_a(int num);
+    int get_a();
+};
+
+void myclass::set_a(int num) {
+    a = num;
 }
 
-int lcm(int a, int b){
-   return a * b / gcd(a, b);
+int myclass::get_a() {
+    return a;
 }
 
-int main(){
-   int a, b;
-   cin >> a >> b;
+int main() {
+    myclass ob1, ob2;
 
-   cout << "最大公約数:" << gcd(a, b) << endl;
-   cout << "最小公倍数:" << lcm(a, b) << endl;
+    ob1.set_a(10);
+    ob2.set_a(99);
+
+    cout << ob1.get_a() << "\n";
+    cout << ob2.get_a() << "\n";
+
+    return 0;
 }

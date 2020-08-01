@@ -1,8 +1,8 @@
 main: main.cpp
-	g++ -o main main.cpp
+	g++ -o main.out main.cpp
 
 test: main
-	./main
+	./main.out
 
 clean:
 	rm -f *.o
